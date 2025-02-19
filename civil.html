@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 10px auto;
+        }
+        section {
+            padding: 20px;
+            background: white;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .contact-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+        }
+        button {
+            background: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #555;
+        }
+        .project-slider {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            gap: 15px;
+            padding: 10px;
+        }
+        .project-slider a {
+            background: #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            min-width: 200px;
+            text-align: center;
+            display: inline-block;
+        }
+         #education {
+    padding: 20px;
+    background: white;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows responsiveness */
+}
+
+.education-card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px; /* Ensures responsiveness */
+    max-width: 30%;
+    text-align: center;
+}
+
+.education-card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.education-card p {
+    margin: 5px 0;
+    color: #555;
+}
+#internship {
+    padding: 20px;
+    background: white;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.internship-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+.internship-card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px; /* Ensures responsiveness */
+    max-width: 30%;
+    text-align: center;
+}
+
+.internship-card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.internship-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Hover Effect */
+.internship-card:hover {
+    background: #ddd;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+#volunteering {
+    padding: 20px;
+    background: white;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.volunteering-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+.volunteering-card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px; /* Ensures responsiveness */
+    max-width: 30%;
+    text-align: center;
+}
+
+.volunteering-card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.volunteering-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Hover Effect */
+.volunteering-card:hover {
+    background: #ddd;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+        .project-slider a:hover {
+            background: #bbb;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="profile.jpg" alt="Your Photo">
+        <h1>Naveen C</h1>
+        <p>Site Engineer | Design</p>
+        <button onclick="viewResume()">View Resume</button>
+    </header>
+    
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p> I Am currently employed at TATA Consultancy Services as a System Engineer with 2.5 years of experience in cloud computing, Azure, Azure DevOps, and Azure pipelines. I have a strong background in installing, configuring, administering, and troubleshooting IBM WebSphere Application Server 8.5 in production environments. My expertise extends to maintaining both web and app servers, as well as managing cloud storage. I am also well-versed in various operating systems, including AIX, Linux, Windows, and have experience with Tomcat and Nginx.<br>
+Throughout my career, I have provided 24/7 support in shift-based environments, ensuring 99.9% system uptime and rapid resolution of critical production issues. I have successfully collaborated with American clients in the healthcare sector, delivering consistent production support and maintaining high system availability.
+<br>
+In my future role as a Civil Site Engineer, I aim to leverage my technical skills to streamline workflows, reduce unnecessary workloads, and introduce efficient system management strategies to optimize project execution.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Core Competencies </h2>
+            <ul>
+                <li>Structural Design and Analysis</li>
+                <li>Building Information Modelling (BIM)</li>
+                <li>Site Supervision and Project Coordination</li>
+                <li>Feasibility Studies and Cost Estimation</li>
+                <li>Construction Safety and Compliance </li>
+                <li>Surveying and Dimensional Drawing </li>
+                <li>Project Budgeting and Scheduling</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <h3>MIDDLEWARE SYSTEM ENGINEER	JULY 2022– PRESENT</h3>
+<p>TATA Consultancy Services <br>
+•	Administered cloud-based solutions and supported the deployment of infrastructure in Azure, streamlining workflows and ensuring the stability of engineering software tools used for civil projects.<br>
+•	Collaborated with DevOps teams to automate processes, improving system uptime and reducing deployment time by 30%.<br>
+•	Worked in a production environment with 24/7 support, ensuring seamless functionality of applications critical to project delivery for clients in the healthcare sector.<br>
+•	Optimized system configurations to ensure high availability, resulting in a 99.9% uptime across all platforms.<br>
+•	Actively engaged in troubleshooting and resolving issues, applying critical thinking and technical expertise to minimize disruptions in project timeline
+</p>
+        </section>
+        <section id="education">
+    <h2>Education</h2>
+    <div class="education-container">
+        <div class="education-card">
+            <h3>Bachelor of Engineering (B.E.)</h3>
+            <p>Civil Engineering</p>
+            <p>St.Joseph's College of engineering | Chennai </p>
+            <p>Graduated:2018-2022 </p>
+            <p>CGPA : 7.8</p>
+        </div>
+
+        <div class="education-card">
+            <h3>Diploma in  Product Design and Analysis</h3>
+            <p>AutoCAD , Revit Architecture, SketchUp , STADD Pro , and 3ds Max</p>
+            <p>CADD Center</p>
+            <p>Graduated: 2022</p>
+        </div>
+
+        <div class="education-card">
+            <h3>Higher Secondary Education</h3>
+            <p>Sai Matriculation Secondary School | Chennai </p>
+            <p>Graduated: 2018</p>
+            <p>Percentage  :82% </p>
+        </div>
+    </div>
+</section>
+
+
+
+        <section id="certifications">
+            <h2>Certifications | Training </h2>
+            <ul>
+                <li>Master Diploma in Product Design and Analysis :  Proficient in AutoCAD, Revit Architecture, SketchUp, STAAD Pro, and 3ds Max. </li>
+                <li>Building Information Modelling (BIM) Workshop – CADD Centre, Chennai | Sept 2019</li>
+                <li>Virtual Reality in Building Design – Design and Analysis Centre, Chennai | Oct 2019</li>
+                <li>Site Visiting Workshop – UNIQ Technologies, Chennai | June 2019</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-slider">
+                <a href="DESIGN%20OF%20G+3.pptx" target="_blank">DESIGN OF G+3</a>
+
+                <a href="DESIGN OF RESIDENTIAL BUILDING FOR MODEL.pptx" target="_blank">DESIGN OF RESIDENTIAL BUILDING MODEL </a>
+                <a href="ENHANCEMENT OF SOIL PROPERTIES.pptx" target="_blank">ENHANCEMENT OF SOIL PROPERTY </a>
+                <a href="BMC.pptx" target="_blank"> BMC</a>
+            </div>
+        </section>
+<section id="internship">
+    <h2>Internships</h2>
+    <div class="internship-container">
+        <div class="internship-card">
+            <h3>Site Engineer</h3>
+            <p><strong>Company:</strong> Aadithya Builders, Chennai </p>
+            <p><strong>Key Responsibilities:</strong><br>•	 Managed sections of construction projects, coordinating resources and ensuring the work met project needs. <br>•	Examined technical designs and drawings to confirm their correctness and alignment with project standards.<br>•	Compiled site reports and tracked progress, recording all construction activities.</p>
+        </div>
+
+        <div class="internship-card">
+            <h3>Site Engineer  </h3>
+            <p><strong>Company:</strong> UNIQ Technologies, Chennai  </p>
+            <p><strong>Duration:</strong> June 2019</p>
+            <p><strong>Key Responsibilities:</strong><br> •	Supervised site activities and coordinated with subcontractors to ensure smooth workflow.<br>
+•	Monitored construction processes, including formwork renewal, reinforcement placement, and concrete pouring.<br>
+•	Ensured safety compliance and adherence to project timelines and quality standards.
+</p>
+        </div>
+
+        <div class="internship-card">
+            <h3>Municipal Administration and Water Supply department</h3>
+            <p><strong>Company:</strong> PWD</p>
+            <p><strong>Duration:</strong> 04.03.2021 – 05.04.2021</p>
+            <p><strong>Key Responsibilities:</strong> <br> Experienced in the various fields  of this office in engineering section , and have gained some knowledge in site instructions , estimation, tendering process etc.</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+            <h2>Additional Skills & Responsibilities </h2>
+            <ul>
+                <li>AutoCAD, Revit, STAAD Pro, 3ds Max, SketchUp</li>
+                <li>Drafting, modelling, and visualization of civil structures</li>
+                <li>Cloud-based solutions and automation in civil engineering workflows</li>
+                <li>Estimating, quantity surveying, cost control, and site organization</li>
+                <li>Coordinating subcontractors and ensuring compliance with health, safety, and quality standards.</li>
+             </ul>
+        </section>
+<section id="volunteering">
+    <h2>Volunteering</h2>
+    <div class="volunteering-container">
+        <div class="volunteering-card">
+            <p><strong>Key Contributions:</strong><br> •	Participated in neighbourhood initiatives to renovate three dilapidated buildings and improve structural integrity.<br>
+•	Assisted in cleaning and maintaining local ponds and lakes as part of a community temple project.
+</p>
+        </div>
+
+        </div>
+</section>
+
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: cnaveen014@example.com</p>
+            <div class="contact-icons">
+                <a href="https://wa.me/6382055634" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel:+916382055634"><i class="fas fa-phone"></i></a>
+                <a href="https://http://www.linkedin.com/in/naveen-c-227075190" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:cnaveen014@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <button onclick="showAlert()">Hire Me</button>
+        </section>
+    </div>
+
+    <script>
+        function showAlert() {
+            alert("Thank you for reaching out! I will get back to you soon.");
+        }
+
+        function viewResume() {
+            window.open("resume.pdf", "_blank");
+        }
+    </script>
+</body>
+</html>
